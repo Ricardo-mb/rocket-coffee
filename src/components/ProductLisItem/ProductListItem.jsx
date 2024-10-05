@@ -1,20 +1,14 @@
 import PropTypes from "prop-types";
 import "./ProductListItem.css";
 
-const ProductListItem = ({
-  name,
-  price,
-  imageUrl,
-  onAddToCart,
-  // isSoldOut
-}) => {
+const ProductListItem = ({ name, price, imageUrl, onAddToCart, isSoldOut }) => {
   return (
     <div className='card'>
       <h2>{name}</h2>
       <img src={imageUrl} alt='product' />
       <small>{price}</small>
-      <button onClick={onAddToCart}>
-        Add to Cart {/* {!isSoldOut ? "out of stock" : "Add to cart"} */}
+      <button onClick={onAddToCart} disabled={isSoldOut}>
+        {isSoldOut ? "out of stock" : "Add to cart"}
       </button>
     </div>
   );

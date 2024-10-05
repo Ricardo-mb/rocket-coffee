@@ -14,6 +14,15 @@ export const standard = () => (
     price={text("price", "2.50")}
     onAddToCart={action("Add to cart clicked")}
     imageUrl={text("imageUrl", "https://unsplash.it/600/400?image=501")}
+  />
+);
+
+export const soldOut = () => (
+  <ProductListItem
+    name={text("Name", "Standard Coffee")}
+    price={text("price", "2.50")}
+    onAddToCart={action("Add to cart clicked")}
+    imageUrl={text("imageUrl", "https://unsplash.it/g/600/400?image=501")}
     isSoldOut
   />
 );
