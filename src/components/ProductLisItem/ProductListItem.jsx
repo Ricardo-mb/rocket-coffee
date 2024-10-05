@@ -3,8 +3,14 @@ import "./ProductListItem.css";
 
 const ProductListItem = ({ name, price, imageUrl, onAddToCart, isSoldOut }) => {
   return (
-    <div className='card'>
-      <h2>{name}</h2>
+    <div
+      className='card'
+      style={{ backgroundColor: !isSoldOut ? "#E8F6FF" : "transparent" }} // Apply color if onSale
+    >
+      <h2>
+        {name}
+        {!isSoldOut ? "(onSale)" : ""}
+      </h2>
       <img src={imageUrl} alt='product' />
       <small>{price}</small>
       <button onClick={onAddToCart} disabled={isSoldOut}>
