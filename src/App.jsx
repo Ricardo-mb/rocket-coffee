@@ -1,5 +1,5 @@
 import "./App.css";
-import { ProductListItem } from "./components/ProductLisItem/ProductListItem.jsx";
+import { ProductListItem } from "./components/patterns/ProductLisItem/ProductListItem.jsx";
 
 function App() {
   const name = "playa";
